@@ -15,9 +15,22 @@
 
 @implementation AppDelegate
 
+#pragma mark - Customize UI
+- (void)customizeAppearence
+{
+    UIColor *barTintColor = [UIColor colorWithRed:20/255.0f
+                                            green:160/255.0f blue:160/255.0f alpha:1.0f];
+    [[UISearchBar appearance] setBarTintColor:barTintColor];
+
+    self.window.tintColor = [UIColor colorWithRed:10/255.0f
+                                            green:80/255.0f blue:80/255.0f alpha:1.0f];
+}
+
+#pragma mark - LifeCycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self customizeAppearence];
 
     self.searchViewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController"
                                                                        bundle:nil];
