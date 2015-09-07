@@ -90,24 +90,130 @@ static NSString * const NothingFoundCellIdentifier = @"NothingFoundCell";
 #pragma mark - UISearchBarDelegate
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [_searchBar resignFirstResponder];
-    _searchResult = [NSMutableArray arrayWithCapacity:10];
+    if ([searchBar.text length] > 0) {
+        [searchBar resignFirstResponder];
 
-    if (![searchBar.text isEqualToString:@"justin bieber"]) {
-        for (int i=0; i<3; i++) {
-            SearchResult *searchResult = [[SearchResult alloc] init];
-            searchResult.name = [NSString stringWithFormat:@"Fake Result '%d'", i];
-            searchResult.artistName = _searchBar.text;
-            [_searchResult addObject:searchResult];
+        _searchResult = [NSMutableArray arrayWithCapacity:10];
+
+        NSURL *url = [self urlWithSearchText:searchBar.text];
+        NSString *jsonString = [self performStoreRequestWithURL:url];
+        if (jsonString == nil) {
+            [self showNetworkError];
+            return;
         }
+        NSDictionary *dictionary = [self parseJSON:jsonString];
+        if (dictionary == nil) {
+            [self showNetworkError];
+            return;
+        }
+
+        NSLog(@"Dictionary '%@'", dictionary);
+
+        [self parseDictionary:dictionary];
+
+        [self.tableView reloadData];
     }
-
-
-    [self.tableView reloadData];
 }
 
 - (UIBarPosition)positionForBar:(id <UIBarPositioning>)bar {
     return UIBarPositionTopAttached;
 }
+
+#pragma mark - Network helper
+
+- (NSURL *)urlWithSearchText:(NSString *)searchText {
+    NSString *escapedSearchText = [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@",
+                                                     escapedSearchText];
+    NSURL *url = [NSURL URLWithString:urlString];
+    return url;
+}
+
+- (NSString *)performStoreRequestWithURL:(NSURL *)url {
+    NSError *error;
+    NSString *resultString = [NSString stringWithContentsOfURL:url
+                                                      encoding:NSUTF8StringEncoding error:&error];
+    if (resultString == nil) {
+        NSLog(@"Download error: '%@'", error);
+        return nil;
+    }
+    return resultString;
+}
+
+- (NSDictionary *)parseJSON:(NSString *)jsonString
+{
+    NSData *data = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSError *error;
+    id resultObject = [NSJSONSerialization JSONObjectWithData:data
+                                                      options:kNilOptions error:&error];
+    if (resultObject == nil) {
+        NSLog(@"JSON error: %@", error);
+        return nil;
+    }
+
+    if (![resultObject isKindOfClass:[NSDictionary class]]) {
+        NSLog(@"JSON Error: Expected dictionary");
+        return nil;
+    }
+
+    return resultObject;
+}
+
+- (void)showNetworkError
+{
+    UIAlertView *alertView = [[UIAlertView alloc]
+            initWithTitle:@"Whoops..."
+                  message:@"There is an error reading from the iTunes Store. Please try again"
+                 delegate:nil
+        cancelButtonTitle:@"OK"
+        otherButtonTitles:nil];
+    [alertView show];
+}
+
+- (void)parseDictionary:(NSDictionary *)dictionary
+{
+    NSArray *array = dictionary[@"results"];
+    if (array == nil) {
+        NSLog(@"Expected 'results' array");
+        return;
+    }
+    for (NSDictionary *resultDictionary in array) {
+        SearchResult *searchResult;
+
+        NSString *wrapperType = resultDictionary[@"wrapperType"];
+
+        if ([wrapperType isEqualToString:@"track"]) {
+            searchResult = [self parseTrack:resultDictionary];
+        }
+
+        if (searchResult != nil) {
+            [_searchResult addObject:searchResult];
+        }
+    }
+}
+
+- (SearchResult *)parseTrack:(NSDictionary *)dictionary
+{
+    SearchResult *searchResult = [[SearchResult alloc] init];
+    searchResult.name = dictionary[@"trackName"];
+    searchResult.artistName = dictionary[@"artistName"];
+    searchResult.artworkURL60 = dictionary[@"artworkUrl60"];
+    searchResult.artworkURL100 = dictionary[@"artworkUrl100"];
+    searchResult.storeURL = dictionary[@"trackViewUrl"];
+    searchResult.kind = dictionary[@"kind"];
+    searchResult.price = dictionary[@"trackPrice"];
+    searchResult.currency = dictionary[@"currency"];
+    searchResult.genre = dictionary[@"primaryGenreName"];
+    return searchResult;
+}
+
+
+
+
+
+
+
+
 
 @end
