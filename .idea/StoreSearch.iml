@@ -9,6 +9,8 @@
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/SearchViewController.xib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Images.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Model/SearchResult.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Model/SearchResult.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearchTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearchTests/StoreSearchTests.m" isTestSource="false" />

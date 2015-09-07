@@ -13,6 +13,7 @@
 		CBE5E7071B9D7B71003AF49C /* StoreSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E7061B9D7B71003AF49C /* StoreSearchTests.m */; };
 		CBE5E7131B9D7BF9003AF49C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E7111B9D7BF9003AF49C /* SearchViewController.m */; };
 		CBE5E7141B9D7BF9003AF49C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E7121B9D7BF9003AF49C /* SearchViewController.xib */; };
+		CBE5E7181B9D8D22003AF49C /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E7171B9D8D22003AF49C /* SearchResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		CBE5E7101B9D7BF9003AF49C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = Controller/SearchViewController.h; sourceTree = "<group>"; };
 		CBE5E7111B9D7BF9003AF49C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = Controller/SearchViewController.m; sourceTree = "<group>"; };
 		CBE5E7121B9D7BF9003AF49C /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Controller/SearchViewController.xib; sourceTree = "<group>"; };
+		CBE5E7161B9D8D22003AF49C /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResult.h; path = Model/SearchResult.h; sourceTree = "<group>"; };
+		CBE5E7171B9D8D22003AF49C /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResult.m; path = Model/SearchResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 				CBE5E6EE1B9D7B71003AF49C /* AppDelegate.h */,
 				CBE5E6EF1B9D7B71003AF49C /* AppDelegate.m */,
 				CBE5E6F71B9D7B71003AF49C /* Images.xcassets */,
+				CBE5E7191B9D8D27003AF49C /* Model */,
 				CBE5E6EA1B9D7B71003AF49C /* Supporting Files */,
 				CBE5E7151B9D7BFF003AF49C /* Controller */,
 			);
@@ -122,6 +126,15 @@
 				CBE5E7121B9D7BF9003AF49C /* SearchViewController.xib */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		CBE5E7191B9D8D27003AF49C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CBE5E7161B9D8D22003AF49C /* SearchResult.h */,
+				CBE5E7171B9D8D22003AF49C /* SearchResult.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +238,7 @@
 			files = (
 				CBE5E6F01B9D7B71003AF49C /* AppDelegate.m in Sources */,
 				CBE5E7131B9D7BF9003AF49C /* SearchViewController.m in Sources */,
+				CBE5E7181B9D8D22003AF49C /* SearchResult.m in Sources */,
 				CBE5E6ED1B9D7B71003AF49C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbad3c6c-f272-4bf8-aaee-86ab969d092e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Model/SearchResult.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Model/SearchResult.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.xib" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StoreSearch.iml" afterPath="$PROJECT_DIR$/.idea/StoreSearch.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/StoreSearch.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StoreSearch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +61,8 @@
       <file leaf-file-name="SearchViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.865285">
-              <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.79792744">
+              <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -198,7 +202,7 @@
     <frame x="0" y="23" width="1280" height="997" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -253,8 +257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.865285">
-          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.79792744">
+          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
           <folding />
         </state>
       </provider>
