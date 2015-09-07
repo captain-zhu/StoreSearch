@@ -14,6 +14,9 @@
 		CBE5E7131B9D7BF9003AF49C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E7111B9D7BF9003AF49C /* SearchViewController.m */; };
 		CBE5E7141B9D7BF9003AF49C /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E7121B9D7BF9003AF49C /* SearchViewController.xib */; };
 		CBE5E7181B9D8D22003AF49C /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E7171B9D8D22003AF49C /* SearchResult.m */; };
+		CBE5E71B1B9DABA5003AF49C /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E71A1B9DABA5003AF49C /* SearchResultCell.xib */; };
+		CBE5E71F1B9DAF36003AF49C /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E71E1B9DAF36003AF49C /* SearchResultCell.m */; };
+		CBE5E7211B9DB7D5003AF49C /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E7201B9DB7D5003AF49C /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,10 @@
 		CBE5E7121B9D7BF9003AF49C /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = Controller/SearchViewController.xib; sourceTree = "<group>"; };
 		CBE5E7161B9D8D22003AF49C /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResult.h; path = Model/SearchResult.h; sourceTree = "<group>"; };
 		CBE5E7171B9D8D22003AF49C /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResult.m; path = Model/SearchResult.m; sourceTree = "<group>"; };
+		CBE5E71A1B9DABA5003AF49C /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		CBE5E71D1B9DAF36003AF49C /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultCell.h; path = View/SearchResultCell.h; sourceTree = "<group>"; };
+		CBE5E71E1B9DAF36003AF49C /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultCell.m; path = View/SearchResultCell.m; sourceTree = "<group>"; };
+		CBE5E7201B9DB7D5003AF49C /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +95,7 @@
 				CBE5E7191B9D8D27003AF49C /* Model */,
 				CBE5E6EA1B9D7B71003AF49C /* Supporting Files */,
 				CBE5E7151B9D7BFF003AF49C /* Controller */,
+				CBE5E71C1B9DABAE003AF49C /* View */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -135,6 +143,17 @@
 				CBE5E7171B9D8D22003AF49C /* SearchResult.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		CBE5E71C1B9DABAE003AF49C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBE5E7201B9DB7D5003AF49C /* NothingFoundCell.xib */,
+				CBE5E71A1B9DABA5003AF49C /* SearchResultCell.xib */,
+				CBE5E71D1B9DAF36003AF49C /* SearchResultCell.h */,
+				CBE5E71E1B9DAF36003AF49C /* SearchResultCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +236,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE5E7211B9DB7D5003AF49C /* NothingFoundCell.xib in Resources */,
 				CBE5E7141B9D7BF9003AF49C /* SearchViewController.xib in Resources */,
+				CBE5E71B1B9DABA5003AF49C /* SearchResultCell.xib in Resources */,
 				CBE5E6F81B9D7B71003AF49C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +259,7 @@
 			files = (
 				CBE5E6F01B9D7B71003AF49C /* AppDelegate.m in Sources */,
 				CBE5E7131B9D7BF9003AF49C /* SearchViewController.m in Sources */,
+				CBE5E71F1B9DAF36003AF49C /* SearchResultCell.m in Sources */,
 				CBE5E7181B9D8D22003AF49C /* SearchResult.m in Sources */,
 				CBE5E6ED1B9D7B71003AF49C /* main.m in Sources */,
 			);

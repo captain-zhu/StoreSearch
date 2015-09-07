@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbad3c6c-f272-4bf8-aaee-86ab969d092e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Model/SearchResult.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Model/SearchResult.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/CloseButton.imageset/CloseButton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/CloseButton.imageset/CloseButton@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/LandscapeBackground.imageset/LandscapeBackground.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/LandscapeBackground.imageset/LandscapeBackground@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/LandscapeButton.imageset/LandscapeButton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/LandscapeButton.imageset/LandscapeButton@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/Placeholder.imageset/Placeholder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/Placeholder.imageset/Placeholder@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/PriceButton.imageset/PriceButton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/PriceButton.imageset/PriceButton@2x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/CloseButton.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/LandscapeBackground.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/LandscapeButton.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/Placeholder.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Images.xcassets/PriceButton.imageset/Contents.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/NothingFoundCell.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/View/SearchResultCell.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/View/SearchResultCell.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/SearchResultCell.xib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StoreSearch.iml" afterPath="$PROJECT_DIR$/.idea/StoreSearch.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/StoreSearch.xcodeproj/project.pbxproj" />
@@ -61,9 +78,11 @@
       <file leaf-file-name="SearchViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79792744">
-              <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-              <folding />
+            <state vertical-scroll-proportion="0.4611399">
+              <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+              <folding>
+                <element signature="e#151#183#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,6 +176,24 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoreSearch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StoreSearch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
@@ -196,6 +233,13 @@
       <option name="number" value="Default" />
       <updated>1441613090533</updated>
     </task>
+    <task id="LOCAL-00001" summary="加入了searchbar和tableview。伪造了searchbar的数据及行为">
+      <created>1441624920711</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1441624920711</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -225,6 +269,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="加入了searchbar和tableview。伪造了searchbar的数据及行为" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入了searchbar和tableview。伪造了searchbar的数据及行为" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -257,9 +305,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79792744">
-          <caret line="79" column="25" selection-start-line="79" selection-start-column="25" selection-end-line="79" selection-end-column="25" />
-          <folding />
+        <state vertical-scroll-proportion="0.4611399">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding>
+            <element signature="e#151#183#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
