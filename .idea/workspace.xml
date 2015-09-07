@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbad3c6c-f272-4bf8-aaee-86ab969d092e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.xib" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StoreSearch/Base.lproj/LaunchScreen.xib" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StoreSearch/Base.lproj/Main.storyboard" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/StoreSearch/ViewController.m" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/StoreSearch/ViewController.h" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/AppDelegate.h" afterPath="$PROJECT_DIR$/StoreSearch/AppDelegate.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/AppDelegate.m" afterPath="$PROJECT_DIR$/StoreSearch/AppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Info.plist" afterPath="$PROJECT_DIR$/StoreSearch/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/StoreSearch.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.xib" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.xib" />
     </list>
     <ignored path="StoreSearch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,11 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StoreSearch/AppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5164076">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.865285">
+              <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -72,6 +74,7 @@
       <list>
         <option value="$PROJECT_DIR$/StoreSearch/AppDelegate.h" />
         <option value="$PROJECT_DIR$/StoreSearch/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" />
       </list>
     </option>
   </component>
@@ -242,8 +245,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/StoreSearch/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5164076">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.865285">
+          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
           <folding />
         </state>
       </provider>

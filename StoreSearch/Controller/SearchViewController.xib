@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
             <connections>
+                <outlet property="searchBar" destination="JGS-Xv-NUt" id="npX-Ec-g6H"/>
+                <outlet property="tableView" destination="xSF-uq-im0" id="c8Q-Xm-vjR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +16,33 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xSF-uq-im0">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="YB2-xu-ZU0"/>
+                        <outlet property="delegate" destination="-1" id="AzT-MR-c9J"/>
+                    </connections>
+                </tableView>
+                <searchBar contentMode="redraw" placeholder="App name, artist, song, album, ebook" translatesAutoresizingMaskIntoConstraints="NO" id="JGS-Xv-NUt">
+                    <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="tNQ-zR-muX"/>
+                    </connections>
+                </searchBar>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xSF-uq-im0" secondAttribute="trailing" id="7dm-aq-fnu"/>
+                <constraint firstAttribute="bottom" secondItem="xSF-uq-im0" secondAttribute="bottom" id="8X5-X7-vxZ"/>
+                <constraint firstItem="JGS-Xv-NUt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="BAx-xB-K4A"/>
+                <constraint firstAttribute="trailing" secondItem="JGS-Xv-NUt" secondAttribute="trailing" id="CP1-SH-A2e"/>
+                <constraint firstItem="xSF-uq-im0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FH0-pc-2zf"/>
+                <constraint firstItem="JGS-Xv-NUt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gIW-YB-ItE"/>
+                <constraint firstItem="xSF-uq-im0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uay-LS-Bvb"/>
+            </constraints>
         </view>
     </objects>
 </document>
