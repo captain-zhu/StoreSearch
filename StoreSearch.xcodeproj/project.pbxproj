@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		41B4CDC259D70C34EA648805 /* libPods-StoreSearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B93F2438DE6D042AD63060B /* libPods-StoreSearch.a */; };
 		CB8B56DA1B9EC7FD00DB29A1 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8B56D91B9EC7FD00DB29A1 /* LoadingCell.xib */; };
+		CB8B56DE1B9F19C500DB29A1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8B56DC1B9F19C500DB29A1 /* DetailViewController.m */; };
+		CB8B56DF1B9F19C500DB29A1 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8B56DD1B9F19C500DB29A1 /* DetailViewController.xib */; };
 		CBE5E6ED1B9D7B71003AF49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E6EC1B9D7B71003AF49C /* main.m */; };
 		CBE5E6F01B9D7B71003AF49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E6EF1B9D7B71003AF49C /* AppDelegate.m */; };
 		CBE5E6F81B9D7B71003AF49C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E6F71B9D7B71003AF49C /* Images.xcassets */; };
@@ -36,6 +38,9 @@
 		913312D1CD2C8C2A0D6838D8 /* Pods-StoreSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoreSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoreSearch/Pods-StoreSearch.release.xcconfig"; sourceTree = "<group>"; };
 		9B93F2438DE6D042AD63060B /* libPods-StoreSearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StoreSearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8B56D91B9EC7FD00DB29A1 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		CB8B56DB1B9F19C500DB29A1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Controller/DetailViewController.h; sourceTree = "<group>"; };
+		CB8B56DC1B9F19C500DB29A1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controller/DetailViewController.m; sourceTree = "<group>"; };
+		CB8B56DD1B9F19C500DB29A1 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = Controller/DetailViewController.xib; sourceTree = "<group>"; };
 		CBE5E6E71B9D7B71003AF49C /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE5E6EB1B9D7B71003AF49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBE5E6EC1B9D7B71003AF49C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,6 +146,9 @@
 				CBE5E7101B9D7BF9003AF49C /* SearchViewController.h */,
 				CBE5E7111B9D7BF9003AF49C /* SearchViewController.m */,
 				CBE5E7121B9D7BF9003AF49C /* SearchViewController.xib */,
+				CB8B56DB1B9F19C500DB29A1 /* DetailViewController.h */,
+				CB8B56DC1B9F19C500DB29A1 /* DetailViewController.m */,
+				CB8B56DD1B9F19C500DB29A1 /* DetailViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBE5E7211B9DB7D5003AF49C /* NothingFoundCell.xib in Resources */,
+				CB8B56DF1B9F19C500DB29A1 /* DetailViewController.xib in Resources */,
 				CBE5E7141B9D7BF9003AF49C /* SearchViewController.xib in Resources */,
 				CBE5E71B1B9DABA5003AF49C /* SearchResultCell.xib in Resources */,
 				CB8B56DA1B9EC7FD00DB29A1 /* LoadingCell.xib in Resources */,
@@ -325,6 +334,7 @@
 				CBE5E71F1B9DAF36003AF49C /* SearchResultCell.m in Sources */,
 				CBE5E7181B9D8D22003AF49C /* SearchResult.m in Sources */,
 				CBE5E6ED1B9D7B71003AF49C /* main.m in Sources */,
+				CB8B56DE1B9F19C500DB29A1 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
