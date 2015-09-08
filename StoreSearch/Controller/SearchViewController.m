@@ -18,6 +18,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
@@ -43,8 +44,10 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.segmentedControl.frame = CGRectMake(16,8, [UIScreen mainScreen].bounds.size.width -32,29);
+
     //使tableview 上面留出64margin，第一行tableview不会被searchbar遮挡了
-    self.tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(108, 0, 0, 0);
     UINib *cellNib = [UINib nibWithNibName:SearchResultCellIdentifier bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:SearchResultCellIdentifier];
     cellNib = [UINib nibWithNibName:NothingFoundCellIdentifier bundle:nil];
@@ -91,13 +94,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
                 dequeueReusableCellWithIdentifier:SearchResultCellIdentifier
                                      forIndexPath:indexPath];
         SearchResult *searchResult = _searchResult[indexPath.row];
-        cell.nameLabel.text = searchResult.name;
-        NSString *artistName = searchResult.artistName;
-        if (artistName == nil) {
-            artistName = @"Unknown";
-        }
-        NSString *kind = [self kindForDisplay:searchResult.kind];
-        cell.artistNameLabel.text = [NSString stringWithFormat:@"%@ (%@)", artistName, kind];
+        [cell configureForSearchResult:searchResult];
 
         return cell;
     }
@@ -119,16 +116,37 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 
 #pragma mark - UISearchBarDelegate
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    if ([searchBar.text length] > 0) {
-        [searchBar resignFirstResponder];
-        
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self performSearch];
+}
+
+- (UIBarPosition)positionForBar:(id <UIBarPositioning>)bar {
+    return UIBarPositionTopAttached;
+}
+
+#pragma mark - UISegmentedController
+
+- (IBAction)segmentChanged:(UISegmentedControl *)sender
+{
+    if (_searchResult != nil) {
+        [self performSearch];
+    }
+}
+
+#pragma mark - Action
+
+- (void)performSearch {
+    if ([self.searchBar.text length] > 0) {
+        [self.searchBar resignFirstResponder];
+        [_queue cancelAllOperations];
+
         _isLoading = YES;
         [self.tableView reloadData];
 
         _searchResult = [NSMutableArray arrayWithCapacity:10];
 
-        NSURL *url = [self urlWithSearchText:searchBar.text];
+        NSURL *url = [self urlWithSearchText:self.searchBar.text category:self.segmentedControl.selectedSegmentIndex];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
         AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
@@ -140,6 +158,9 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
             _isLoading = NO;
             [self.tableView reloadData];
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            if (operation.cancelled) {
+                return;
+            }
             [self showNetworkError];
             _isLoading = NO;
             [self.tableView reloadData];
@@ -149,16 +170,29 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     }
 }
 
-- (UIBarPosition)positionForBar:(id <UIBarPositioning>)bar {
-    return UIBarPositionTopAttached;
-}
-
 #pragma mark - Network helper
 
-- (NSURL *)urlWithSearchText:(NSString *)searchText {
+- (NSURL *)urlWithSearchText:(NSString *)searchText category:(NSInteger)category
+{
+    NSString *categoryName;
+    switch (category) {
+        case 0:
+            categoryName = @"";
+            break;
+        case 1:
+            categoryName = @"musicTrack";
+            break;
+        case 2:
+            categoryName = @"software";
+            break;
+        case 3:
+            categoryName = @"ebook";
+            break;
+    }
+
     NSString *escapedSearchText = [searchText stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@&limit=200",
-                                                     escapedSearchText];
+    NSString *urlString = [NSString stringWithFormat:@"http://itunes.apple.com/search?term=%@&limit=200&entity=%@",
+                                                     escapedSearchText, categoryName];
     NSURL *url = [NSURL URLWithString:urlString];
     return url;
 }
@@ -262,30 +296,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     return searchResult;
 }
 
-- (NSString *)kindForDisplay:(NSString *)kind
-{
-    if ([kind isEqualToString:@"album"]) {
-        return @"Album";
-    } else if ([kind isEqualToString:@"audioBook"]) {
-        return @"Audio Book";
-    } else if ([kind isEqualToString:@"book"]) {
-        return @"Book";
-    } else if ([kind isEqualToString:@"ebook"]) {
-        return @"E-Book";
-    } else if ([kind isEqualToString:@"feature-movie"]) {
-        return @"Movie";
-    } else if ([kind isEqualToString:@"music-video"]) {
-        return @"Music Video";
-    } else if ([kind isEqualToString:@"podcast"]) {
-        return @"Podcast";
-    } else if ([kind isEqualToString:@"song"]) {
-        return @"Song";
-    } else if ([kind isEqualToString:@"tv-episode"]) {
-        return @"TV Episode";
-    } else {
-        return kind;
-    }
-}
+
 
 
 

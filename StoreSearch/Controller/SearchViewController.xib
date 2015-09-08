@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController">
             <connections>
                 <outlet property="searchBar" destination="JGS-Xv-NUt" id="npX-Ec-g6H"/>
+                <outlet property="segmentedControl" destination="jiq-4H-1Us" id="R5a-Om-Fwb"/>
                 <outlet property="tableView" destination="xSF-uq-im0" id="c8Q-Xm-vjR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -32,6 +33,29 @@
                         <outlet property="delegate" destination="-1" id="tNQ-zR-muX"/>
                     </connections>
                 </searchBar>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RFF-K7-TVX">
+                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                    <items>
+                        <navigationItem id="az6-MP-tst">
+                            <nil key="title"/>
+                            <barButtonItem key="leftBarButtonItem" style="plain" id="Zap-bn-sT6">
+                                <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="jiq-4H-1Us">
+                                    <rect key="frame" x="150" y="8" width="300" height="29"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="All"/>
+                                        <segment title="Music"/>
+                                        <segment title="Software"/>
+                                        <segment title="E-books"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="segmentChanged:" destination="-1" eventType="valueChanged" id="NfE-2M-g6d"/>
+                                    </connections>
+                                </segmentedControl>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
