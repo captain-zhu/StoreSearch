@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB8B56DA1B9EC7FD00DB29A1 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8B56D91B9EC7FD00DB29A1 /* LoadingCell.xib */; };
 		CBE5E6ED1B9D7B71003AF49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E6EC1B9D7B71003AF49C /* main.m */; };
 		CBE5E6F01B9D7B71003AF49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E6EF1B9D7B71003AF49C /* AppDelegate.m */; };
 		CBE5E6F81B9D7B71003AF49C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E6F71B9D7B71003AF49C /* Images.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB8B56D91B9EC7FD00DB29A1 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		CBE5E6E71B9D7B71003AF49C /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE5E6EB1B9D7B71003AF49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBE5E6EC1B9D7B71003AF49C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		CBE5E71C1B9DABAE003AF49C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB8B56D91B9EC7FD00DB29A1 /* LoadingCell.xib */,
 				CBE5E7201B9DB7D5003AF49C /* NothingFoundCell.xib */,
 				CBE5E71A1B9DABA5003AF49C /* SearchResultCell.xib */,
 				CBE5E71D1B9DAF36003AF49C /* SearchResultCell.h */,
@@ -239,6 +242,7 @@
 				CBE5E7211B9DB7D5003AF49C /* NothingFoundCell.xib in Resources */,
 				CBE5E7141B9D7BF9003AF49C /* SearchViewController.xib in Resources */,
 				CBE5E71B1B9DABA5003AF49C /* SearchResultCell.xib in Resources */,
+				CB8B56DA1B9EC7FD00DB29A1 /* LoadingCell.xib in Resources */,
 				CBE5E6F81B9D7B71003AF49C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +443,7 @@
 				CBE5E70C1B9D7B71003AF49C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBE5E70D1B9D7B71003AF49C /* Build configuration list for PBXNativeTarget "StoreSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +452,7 @@
 				CBE5E70F1B9D7B71003AF49C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
