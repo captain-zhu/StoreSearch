@@ -11,6 +11,7 @@
 #import "SearchResultCell.h"
 #import <AFNetworking/AFNetworking.h>
 #import "DetailViewController.h"
+#import "LandscapeViewController.h"
 
 static NSString * const SearchResultCellIdentifier = @"SearchResultCell";
 static NSString * const NothingFoundCellIdentifier = @"NothingFoundCell";
@@ -23,13 +24,16 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 
 @end
 
-#pragma mark - LifeCycle
-
 @implementation SearchViewController{
     NSMutableArray *_searchResult;
     BOOL _isLoading;
     NSOperationQueue *_queue;
+    LandscapeViewController *_landscapeViewController;
+    UISearchBarStyle _searchBarStyle;
+    __weak DetailViewController *_detailViewController;
 }
+
+#pragma mark - LifeCycle
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,6 +62,19 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     self.tableView.rowHeight = 80;
 
     [self.searchBar becomeFirstResponder];
+
+    _searchBarStyle = UISearchBarStyleDefault;
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+
+    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+        [self hideLandscapeViewWithDuration:duration];
+    } else {
+        [self showLandscapeViewWithDuration:duration];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,6 +126,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 
     DetailViewController *controller = [[DetailViewController alloc]
             initWithNibName:@"DetailViewController" bundle:nil];
+    _detailViewController = controller;
     controller.searchResult = _searchResult[indexPath.row];
     [self.view addSubview:controller.view];
 
@@ -132,6 +150,11 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 
 - (UIBarPosition)positionForBar:(id <UIBarPositioning>)bar {
     return UIBarPositionTopAttached;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return _searchBarStyle;
 }
 
 #pragma mark - UISegmentedController
@@ -179,7 +202,48 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     }
 }
 
-#pragma mark - Network helper
+#pragma mark - Landscape
+
+- (void)showLandscapeViewWithDuration:(NSTimeInterval)duration
+{
+    if (_landscapeViewController == nil) {
+        _landscapeViewController = [[LandscapeViewController alloc]
+                initWithNibName:@"LandscapeViewController" bundle:nil];
+        _landscapeViewController.view.frame = self.view.bounds;
+        _landscapeViewController.view.alpha = 0.0f;
+
+        [self.view addSubview:_landscapeViewController.view];
+        [self addChildViewController:_landscapeViewController];
+        [self.searchBar resignFirstResponder];
+        [_detailViewController dismissFromParentViewControllerWithAnimationType:
+                DetailViewControllerAnimationTypeFade];
+
+        [UIView animateWithDuration:duration animations:^{
+            _landscapeViewController.view.alpha = 1.0f;
+            _searchBarStyle = UIStatusBarStyleLightContent;
+            [self setNeedsStatusBarAppearanceUpdate];
+        } completion:^(BOOL finished){
+            [_landscapeViewController didMoveToParentViewController:self];
+        }];
+    }
+}
+
+- (void)hideLandscapeViewWithDuration:(NSTimeInterval)duration
+{
+    if (_landscapeViewController != nil) {
+        [_landscapeViewController willMoveToParentViewController:nil];
+        [UIView animateWithDuration:duration animations:^{
+            _landscapeViewController.view.alpha = 0.0f;
+
+            _searchBarStyle = UISearchBarStyleDefault;
+            [self setNeedsStatusBarAppearanceUpdate];
+        } completion:^(BOOL finished) {
+            [_landscapeViewController.view removeFromSuperview];
+            [_landscapeViewController removeFromParentViewController];
+            _landscapeViewController = nil;
+        }];
+    }
+}
 
 - (NSURL *)urlWithSearchText:(NSString *)searchText category:(NSInteger)category
 {

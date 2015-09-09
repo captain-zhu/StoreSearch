@@ -59,11 +59,14 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="JGS-Xv-NUt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="2lA-W8-Mb0"/>
                 <constraint firstAttribute="trailing" secondItem="xSF-uq-im0" secondAttribute="trailing" id="7dm-aq-fnu"/>
                 <constraint firstAttribute="bottom" secondItem="xSF-uq-im0" secondAttribute="bottom" id="8X5-X7-vxZ"/>
                 <constraint firstItem="JGS-Xv-NUt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="BAx-xB-K4A"/>
                 <constraint firstAttribute="trailing" secondItem="JGS-Xv-NUt" secondAttribute="trailing" id="CP1-SH-A2e"/>
                 <constraint firstItem="xSF-uq-im0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FH0-pc-2zf"/>
+                <constraint firstAttribute="trailing" secondItem="JGS-Xv-NUt" secondAttribute="trailing" id="dbl-QN-vtl"/>
+                <constraint firstItem="JGS-Xv-NUt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dw3-ym-jgn"/>
                 <constraint firstItem="JGS-Xv-NUt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gIW-YB-ItE"/>
                 <constraint firstItem="xSF-uq-im0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uay-LS-Bvb"/>
             </constraints>

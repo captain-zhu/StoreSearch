@@ -55,6 +55,9 @@
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/DetailViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/DetailViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/DetailViewController.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/LandscapeViewController.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/LandscapeViewController.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/LandscapeViewController.xib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/SearchViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/SearchViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Controller/SearchViewController.xib" isTestSource="false" />

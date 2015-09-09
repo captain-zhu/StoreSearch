@@ -10,6 +10,10 @@
 
 @class SearchResult;
 
+typedef NS_ENUM(NSInteger, DetailViewControllerAnimationType) {
+    DetailViewControllerAnimationTypeSlide,
+    DetailViewControllerAnimationTypeFade
+}
 @interface DetailViewController : UIViewController
 
 @property (nonatomic, strong) SearchResult *searchResult;
@@ -22,8 +26,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *genreLabel;
 @property (nonatomic, weak) IBOutlet UIButton *priceButton;
 
-- (void)presentInParentViewController:
-        (UIViewController *)parentViewController;
-- (void)dismissFromParentViewController;
+- (void)presentInParentViewController:(UIViewController *)parentViewController;
+- (void)dismissFromParentViewControllerWithAnimationType:(DetailViewControllerAnimationType)animationType;
 
 @end
