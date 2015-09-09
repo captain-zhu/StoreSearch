@@ -22,4 +22,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *genreLabel;
 @property (nonatomic, weak) IBOutlet UIButton *priceButton;
 
+- (void)presentInParentViewController:
+        (UIViewController *)parentViewController;
+- (void)dismissFromParentViewController;
+
 @end

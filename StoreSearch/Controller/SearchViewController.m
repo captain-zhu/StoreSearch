@@ -111,10 +111,8 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
             initWithNibName:@"DetailViewController" bundle:nil];
     controller.searchResult = _searchResult[indexPath.row];
     [self.view addSubview:controller.view];
-    controller.view.frame = self.view.frame;
-    controller.view.center = self.view.center;
-    [self addChildViewController:controller];
-    [controller didMoveToParentViewController:self];
+
+    [controller presentInParentViewController:self];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
