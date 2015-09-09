@@ -65,6 +65,8 @@
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/Model/SearchResult.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/NothingFoundCell.xib" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/SearchResultCell.xib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/StoreSearch/View/GradientView.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/StoreSearch/View/GradientView.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/View/SearchResultCell.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/View/SearchResultCell.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/StoreSearch/main.m" isTestSource="false" />

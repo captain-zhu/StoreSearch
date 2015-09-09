@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class SearchResult;
+
 @interface DetailViewController : UIViewController
+
+@property (nonatomic, strong) SearchResult *searchResult;
 
 @property (nonatomic, weak) IBOutlet UIView *popupView;
 @property (nonatomic, weak) IBOutlet UIImageView *artworkImageView;
