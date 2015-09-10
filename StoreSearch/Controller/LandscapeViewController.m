@@ -8,6 +8,7 @@
 
 #import "LandscapeViewController.h"
 #import "SearchResult.h"
+#import <AFNetworking/UIButton+AFNetworking.h>
 
 @interface LandscapeViewController ()<UIScrollViewDelegate>
 
@@ -55,6 +56,9 @@
 - (void)dealloc
 {
     NSLog(@"dealloc %@", self);
+    for (UIButton *button in self.scrollView.subviews) {
+        [button cancelImageRequestOperationForState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,11 +94,12 @@
     int column = 0;
 
     for (SearchResult *searchResult in self.searchResults) {
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
 
-        button.backgroundColor = [UIColor whiteColor];
-        [button setTitle:[NSString stringWithFormat:@"%d", index]
-                forState:UIControlStateNormal];
+        [button setBackgroundImage:
+                        [UIImage imageNamed:@"LandscapeButton"]
+                          forState:UIControlStateNormal];
+        [self downloadImagesForSearchResult:searchResult andPlaceOnButton:button];
         button.frame = CGRectMake(x + marginHorz, 20.0f +
                 row*itemHeight + marginVert, buttonWidth, buttonHeight);
 
@@ -148,14 +153,28 @@
                      }
                      completion:nil];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Networking
+
+- (void)downloadImagesForSearchResult:(SearchResult *)searchResult
+                       andPlaceOnButton:(UIButton *)button
+{
+    NSURL *url = [NSURL URLWithString:searchResult.artworkURL60];
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+
+    __weak UIButton *weakButton = button;
+    [button setImageForState:UIControlStateNormal withURLRequest:request
+            placeholderImage:nil
+            success:^(NSURLRequest *request,NSHTTPURLResponse *response, UIImage *image) {
+                UIImage *unscaledImage = [UIImage
+                        imageWithCGImage:image.CGImage scale:1.0
+                             orientation:image.imageOrientation];
+                [weakButton setImage:unscaledImage
+                            forState:UIControlStateNormal];
+            }
+                     failure:nil];
 }
-*/
 
 @end
