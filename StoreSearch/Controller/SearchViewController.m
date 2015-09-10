@@ -209,6 +209,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     if (_landscapeViewController == nil) {
         _landscapeViewController = [[LandscapeViewController alloc]
                 initWithNibName:@"LandscapeViewController" bundle:nil];
+        _landscapeViewController.searchResults = _searchResult;
         _landscapeViewController.view.frame = self.view.bounds;
         _landscapeViewController.view.alpha = 0.0f;
 
