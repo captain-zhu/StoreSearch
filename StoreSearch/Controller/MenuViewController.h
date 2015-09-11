@@ -1,8 +1,8 @@
 //
-//  SearchViewController.h
+//  MenuViewController.h
 //  StoreSearch
 //
-//  Created by zhu yongxuan on 15/9/7.
+//  Created by zhu yongxuan on 15/9/11.
 //  Copyright (c) 2015年 zhu yongxuan. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class DetailViewController;
 
-@interface SearchViewController : UIViewController
+@interface MenuViewController : UITableViewController
 
 @property (nonatomic, weak) DetailViewController *detailViewController;
 

@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import "SearchResult.h"
 #import "SearchResultCell.h"
+#import "DetailViewController.h"
 #import <AFNetworking/AFNetworking.h>
 #import "DetailViewController.h"
 #import "LandscapeViewController.h"
@@ -29,7 +30,6 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     Search *_search;
     LandscapeViewController *_landscapeViewController;
     UISearchBarStyle _searchBarStyle;
-    __weak DetailViewController *_detailViewController;
 }
 
 #pragma mark - LifeCycle
@@ -37,7 +37,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.segmentedControl.frame = CGRectMake(16,8, [UIScreen mainScreen].bounds.size.width -32,29);
+    self.segmentedControl.frame = CGRectMake(16,8, 300,29);
 
     //使tableview 上面留出64margin，第一行tableview不会被searchbar遮挡了
     self.tableView.contentInset = UIEdgeInsetsMake(108, 0, 0, 0);
@@ -49,19 +49,24 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
     [self.tableView registerNib:cellNib forCellReuseIdentifier:LoadingCellIdentifier];
     self.tableView.rowHeight = 80;
 
-    [self.searchBar becomeFirstResponder];
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        [self.searchBar becomeFirstResponder];
+    }
 
     _searchBarStyle = UISearchBarStyleDefault;
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+                                duration:(NSTimeInterval)duration
 {
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
 
-    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
-        [self hideLandscapeViewWithDuration:duration];
-    } else {
-        [self showLandscapeViewWithDuration:duration];
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
+            [self hideLandscapeViewWithDuration:duration];
+        } else {
+            [self showLandscapeViewWithDuration:duration];
+        }
     }
 }
 
@@ -109,16 +114,21 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     [self.searchBar resignFirstResponder];
+    SearchResult *searchResult = _search.searchResults[indexPath.row];
 
-    DetailViewController *controller = [[DetailViewController alloc]
-            initWithNibName:@"DetailViewController" bundle:nil];
-    _detailViewController = controller;
-    controller.searchResult = _search.searchResults[indexPath.row];
-    [self.view addSubview:controller.view];
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        DetailViewController *controller = [[DetailViewController alloc]
+                initWithNibName:@"DetailViewController" bundle:nil];
+        controller.searchResult = searchResult;
+        self.detailViewController = controller;
+        [controller presentInParentViewController:self];
+    } else {
+        self.detailViewController.searchResult = searchResult;
+    }
 
-    [controller presentInParentViewController:self];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -166,6 +176,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
                                [self showNetworkError];
                            }
 
+                           [_landscapeViewController searchResultsReceived];
                            [self.tableView reloadData];
 
                        }];
@@ -187,7 +198,7 @@ static NSString * const LoadingCellIdentifier = @"LoadingCell";
         [self.view addSubview:_landscapeViewController.view];
         [self addChildViewController:_landscapeViewController];
         [self.searchBar resignFirstResponder];
-        [_detailViewController dismissFromParentViewControllerWithAnimationType:
+        [self.detailViewController dismissFromParentViewControllerWithAnimationType:
                 DetailViewControllerAnimationTypeFade];
 
         [UIView animateWithDuration:duration animations:^{

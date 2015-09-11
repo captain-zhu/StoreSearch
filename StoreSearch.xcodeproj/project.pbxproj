@@ -15,6 +15,9 @@
 		CBAD37351BA04D5100CA5087 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAD37341BA04D5100CA5087 /* GradientView.m */; };
 		CBAD373C1BA068A600CA5087 /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAD373A1BA068A600CA5087 /* LandscapeViewController.m */; };
 		CBAD373D1BA068A600CA5087 /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAD373B1BA068A600CA5087 /* LandscapeViewController.xib */; };
+		CBDB35171BA2C6B100C30932 /* DetailViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBDB35161BA2C6B100C30932 /* DetailViewController~ipad.xib */; };
+		CBDB351A1BA2F27A00C30932 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDB35191BA2F27A00C30932 /* MenuViewController.m */; };
+		CBDB351C1BA2FD1100C30932 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDB351B1BA2FD1100C30932 /* MessageUI.framework */; };
 		CBE5E6ED1B9D7B71003AF49C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E6EC1B9D7B71003AF49C /* main.m */; };
 		CBE5E6F01B9D7B71003AF49C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E6EF1B9D7B71003AF49C /* AppDelegate.m */; };
 		CBE5E6F81B9D7B71003AF49C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E6F71B9D7B71003AF49C /* Images.xcassets */; };
@@ -24,7 +27,6 @@
 		CBE5E7181B9D8D22003AF49C /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E7171B9D8D22003AF49C /* SearchResult.m */; };
 		CBE5E71B1B9DABA5003AF49C /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E71A1B9DABA5003AF49C /* SearchResultCell.xib */; };
 		CBE5E71F1B9DAF36003AF49C /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBE5E71E1B9DAF36003AF49C /* SearchResultCell.m */; };
-		CBE5E7211B9DB7D5003AF49C /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE5E7201B9DB7D5003AF49C /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,10 @@
 		CBAD37391BA068A600CA5087 /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LandscapeViewController.h; path = Controller/LandscapeViewController.h; sourceTree = "<group>"; };
 		CBAD373A1BA068A600CA5087 /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LandscapeViewController.m; path = Controller/LandscapeViewController.m; sourceTree = "<group>"; };
 		CBAD373B1BA068A600CA5087 /* LandscapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LandscapeViewController.xib; path = Controller/LandscapeViewController.xib; sourceTree = "<group>"; };
+		CBDB35161BA2C6B100C30932 /* DetailViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "DetailViewController~ipad.xib"; path = "Controller/DetailViewController~ipad.xib"; sourceTree = "<group>"; };
+		CBDB35181BA2F27A00C30932 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Controller/MenuViewController.h; sourceTree = "<group>"; };
+		CBDB35191BA2F27A00C30932 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Controller/MenuViewController.m; sourceTree = "<group>"; };
+		CBDB351B1BA2FD1100C30932 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		CBE5E6E71B9D7B71003AF49C /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBE5E6EB1B9D7B71003AF49C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBE5E6EC1B9D7B71003AF49C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,7 +75,6 @@
 		CBE5E71A1B9DABA5003AF49C /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		CBE5E71D1B9DAF36003AF49C /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchResultCell.h; path = View/SearchResultCell.h; sourceTree = "<group>"; };
 		CBE5E71E1B9DAF36003AF49C /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchResultCell.m; path = View/SearchResultCell.m; sourceTree = "<group>"; };
-		CBE5E7201B9DB7D5003AF49C /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDB351C1BA2FD1100C30932 /* MessageUI.framework in Frameworks */,
 				41B4CDC259D70C34EA648805 /* libPods-StoreSearch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,9 +166,12 @@
 				CB8B56DB1B9F19C500DB29A1 /* DetailViewController.h */,
 				CB8B56DC1B9F19C500DB29A1 /* DetailViewController.m */,
 				CB8B56DD1B9F19C500DB29A1 /* DetailViewController.xib */,
+				CBDB35161BA2C6B100C30932 /* DetailViewController~ipad.xib */,
 				CBAD37391BA068A600CA5087 /* LandscapeViewController.h */,
 				CBAD373A1BA068A600CA5087 /* LandscapeViewController.m */,
 				CBAD373B1BA068A600CA5087 /* LandscapeViewController.xib */,
+				CBDB35181BA2F27A00C30932 /* MenuViewController.h */,
+				CBDB35191BA2F27A00C30932 /* MenuViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -182,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				CB8B56D91B9EC7FD00DB29A1 /* LoadingCell.xib */,
-				CBE5E7201B9DB7D5003AF49C /* NothingFoundCell.xib */,
 				CBE5E71A1B9DABA5003AF49C /* SearchResultCell.xib */,
 				CBE5E71D1B9DAF36003AF49C /* SearchResultCell.h */,
 				CBE5E71E1B9DAF36003AF49C /* SearchResultCell.m */,
@@ -204,6 +212,7 @@
 		DE78080331612EF377AF17AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBDB351B1BA2FD1100C30932 /* MessageUI.framework */,
 				9B93F2438DE6D042AD63060B /* libPods-StoreSearch.a */,
 			);
 			name = Frameworks;
@@ -291,10 +300,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBE5E7211B9DB7D5003AF49C /* NothingFoundCell.xib in Resources */,
 				CB8B56DF1B9F19C500DB29A1 /* DetailViewController.xib in Resources */,
 				CBE5E7141B9D7BF9003AF49C /* SearchViewController.xib in Resources */,
 				CBE5E71B1B9DABA5003AF49C /* SearchResultCell.xib in Resources */,
+				CBDB35171BA2C6B100C30932 /* DetailViewController~ipad.xib in Resources */,
 				CB8B56DA1B9EC7FD00DB29A1 /* LoadingCell.xib in Resources */,
 				CBE5E6F81B9D7B71003AF49C /* Images.xcassets in Resources */,
 				CBAD373D1BA068A600CA5087 /* LandscapeViewController.xib in Resources */,
@@ -357,6 +366,7 @@
 				CBAD37351BA04D5100CA5087 /* GradientView.m in Sources */,
 				CBAD373C1BA068A600CA5087 /* LandscapeViewController.m in Sources */,
 				CB8B56DE1B9F19C500DB29A1 /* DetailViewController.m in Sources */,
+				CBDB351A1BA2F27A00C30932 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,11 +475,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				INFOPLIST_FILE = StoreSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				WARNING_CFLAGS = "-Wno-unused-parameter";
 			};
 			name = Debug;
 		};
@@ -479,11 +493,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_STATIC_ANALYZER_MODE = deep;
 				INFOPLIST_FILE = StoreSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
+				WARNING_CFLAGS = "-Wno-unused-parameter";
 			};
 			name = Release;
 		};

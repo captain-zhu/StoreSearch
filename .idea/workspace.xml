@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbad3c6c-f272-4bf8-aaee-86ab969d092e" name="Default" comment="加入了searchbar和tableview。伪造了searchbar的数据及行为">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Model/Search.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Model/Search.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController~ipad.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Controller/MenuViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/StoreSearch/Controller/MenuViewController.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/StoreSearch/NothingFoundCell.xib" afterPath="$PROJECT_DIR$/StoreSearch/en.lproj/NothingFoundCell.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/AppDelegate.h" afterPath="$PROJECT_DIR$/StoreSearch/AppDelegate.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/AppDelegate.m" afterPath="$PROJECT_DIR$/StoreSearch/AppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.h" afterPath="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.m" afterPath="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.xib" afterPath="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.xib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.h" afterPath="$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.m" afterPath="$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.h" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" afterPath="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StoreSearch.iml" afterPath="$PROJECT_DIR$/.idea/StoreSearch.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/StoreSearch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/StoreSearch.xcodeproj/project.pbxproj" />
@@ -24,7 +32,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_iPhone_6_8.4_x86_64_1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_iPad_2_8.4_i386_2" />
   <component name="FavoritesManager">
     <favorites_list name="StoreSearch" />
   </component>
@@ -34,17 +42,83 @@
         <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchViewController.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DetailViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8313253">
+              <caret line="283" column="1" selection-start-line="283" selection-start-column="1" selection-end-line="283" selection-end-column="1" />
+              <folding>
+                <element signature="e#151#183#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/MenuViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+              <folding>
+                <element signature="e#150#180#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/MenuViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StoreSearch/AppDelegate.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+              <folding>
+                <element signature="e#142#165#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppDelegate.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/StoreSearch/AppDelegate.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5490534">
-              <caret line="168" column="55" selection-start-line="168" selection-start-column="55" selection-end-line="168" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <element signature="e#151#183#0" expanded="true" />
               </folding>
@@ -64,74 +138,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Search.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StoreSearch/Model/Search.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LandscapeViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.m">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+              <caret line="115" column="110" selection-start-line="115" selection-start-column="110" selection-end-line="115" selection-end-column="110" />
               <folding>
                 <element signature="e#154#189#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIButton+AFNetworking.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="167" column="56" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AFHTTPSessionManager.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AFURLSessionManager.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pods/AFNetworking/AFNetworking/AFURLSessionManager.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIButton+AFNetworking.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LandscapeViewController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -144,21 +158,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/StoreSearch/AppDelegate.h" />
-        <option value="$PROJECT_DIR$/StoreSearch/AppDelegate.m" />
         <option value="$PROJECT_DIR$/Podfile" />
         <option value="$PROJECT_DIR$/StoreSearch/View/SearchResultCell.h" />
         <option value="$PROJECT_DIR$/StoreSearch/Model/SearchResult.m" />
         <option value="$PROJECT_DIR$/StoreSearch/Model/SearchResult.h" />
         <option value="$PROJECT_DIR$/StoreSearch/View/SearchResultCell.m" />
         <option value="$PROJECT_DIR$/StoreSearch/View/GradientView.m" />
-        <option value="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.m" />
-        <option value="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.h" />
-        <option value="$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.h" />
-        <option value="$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.m" />
         <option value="$PROJECT_DIR$/StoreSearch/Model/Search.h" />
         <option value="$PROJECT_DIR$/StoreSearch/Model/Search.m" />
+        <option value="$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.h" />
+        <option value="$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.m" />
+        <option value="$PROJECT_DIR$/StoreSearch/AppDelegate.h" />
+        <option value="$PROJECT_DIR$/StoreSearch/AppDelegate.m" />
+        <option value="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.h" />
         <option value="$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m" />
+        <option value="$PROJECT_DIR$/StoreSearch/Controller/MenuViewController.h" />
+        <option value="$PROJECT_DIR$/StoreSearch/Controller/MenuViewController.m" />
+        <option value="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.h" />
+        <option value="$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.m" />
       </list>
     </option>
   </component>
@@ -367,7 +384,7 @@
     <frame x="0" y="23" width="1280" height="997" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32596686" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32486188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -408,24 +425,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/StoreSearch/View/SearchResultCell.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding>
-            <element signature="e#151#183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -445,6 +444,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -507,6 +507,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -569,6 +570,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -631,6 +633,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -642,20 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StoreSearch/AppDelegate.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StoreSearch/AppDelegate.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Podfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -663,17 +652,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StoreSearch/View/SearchResultCell.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -708,16 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="104" column="34" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
-          <folding>
-            <element signature="e#151#183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/StoreSearch/View/SearchResultCell.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -726,19 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="2" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pods/AFNetworking/UIKit+AFNetworking/UIButton+AFNetworking.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="167" column="56" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,25 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
-          <folding>
-            <element signature="e#154#189#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -788,6 +731,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -802,10 +753,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/LandscapeViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="110" selection-start-line="115" selection-start-column="110" selection-end-line="115" selection-end-column="110" />
+          <folding>
+            <element signature="e#154#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/AppDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="57" selection-start-line="47" selection-start-column="57" selection-end-line="47" selection-end-column="57" />
+          <folding>
+            <element signature="e#142#165#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/SearchViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5490534">
-          <caret line="168" column="55" selection-start-line="168" selection-start-column="55" selection-end-line="168" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="e#151#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/MenuViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/MenuViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+          <folding>
+            <element signature="e#150#180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StoreSearch/Controller/DetailViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8313253">
+          <caret line="283" column="1" selection-start-line="283" selection-start-column="1" selection-end-line="283" selection-end-column="1" />
           <folding>
             <element signature="e#151#183#0" expanded="true" />
           </folding>
